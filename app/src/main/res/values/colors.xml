@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#263238</color>
+
+    <color name="greyed_icon">#E4E4E4</color>
+    <color name="blue_button">#65b4ce</color>
+
+    <color name="into1">#B3E5FC</color>
+    <color name="into2">#b2ebf2</color>
+    <color name="into3">#b2dfdb</color>
+    <color name="greyed_text">#9e9e9e</color>
+
+</resources>

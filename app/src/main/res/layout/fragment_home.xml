@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/side_nav_bar"
+
+    tools:context=".MenuFragments.Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_above="@+id/bottom_nav_card"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/marqueeExamNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="5dip"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#3949AB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="EXAMS"
+                android:textSize="@dimen/sub_heading_text_size"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/all_exams_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/main_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                fancy:cardBackgroundColor="#fff"
+                fancy:cardCornerRadius="5dp"
+                fancy:cardElevation="6dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.smarteist.autoimageslider.SliderLayout
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignParentTop="true"
+                         />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="@dimen/sub_heading_text_size"
+                            android:text="SUBJECT TEST"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/moretest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="More"
+                            android:textSize="@dimen/sub_heading_text_size"
+                            android:textColor="@color/blue_button"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:weightSum="2">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            fancy:cardBackgroundColor="#2979FF"
+                            fancy:cardCornerRadius="4dp"
+                            fancy:cardElevation="4dp">
+
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                android:background="@color/colorPrimary"
+                                android:text="Strength of materials"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            fancy:cardBackgroundColor="#E53935"
+                            fancy:cardCornerRadius="4dp"
+                            fancy:cardElevation="4dp">
+
+                            <TextView
+                                android:id="@+id/tv2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                android:text="Geo-technical Engineering"
+                                android:background="#ffffff"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:weightSum="2">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            fancy:cardBackgroundColor="#43A047"
+                            fancy:cardCornerRadius="4dp"
+                            fancy:cardElevation="4dp">
+
+                            <TextView
+                                android:id="@+id/tv3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                android:text="General Knowledge"
+                                android:background="#ffffff"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            fancy:cardBackgroundColor="#FB8C00"
+                            fancy:cardCornerRadius="4dp"
+                            fancy:cardElevation="4dp">
+
+                            <TextView
+                                android:id="@+id/tv4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                android:text="Marathi"
+                                android:background="#ffffff"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/bottom_nav_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        fancy:cardBackgroundColor="#fff"
+        fancy:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageButton
+                android:layout_weight="1"
+                android:tint="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/daily_dose"
+                android:background="@android:color/transparent"
+                android:padding="10dp"/>
+
+            <ImageButton
+                android:layout_weight="1"
+                android:tint="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/exam"
+                android:background="@android:color/transparent"
+                android:padding="10dp"/>
+
+            <ImageButton
+                android:layout_weight="1"
+                android:tint="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/support"
+                android:background="@android:color/transparent"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
