@@ -10,6 +10,8 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:windowLightStatusBar">true</item>
+
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -32,8 +34,13 @@
         <item name="paddingEnd">32dp</item>
     </style>
 
+    <style name="TintTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/dark_blue</item>
+    </style>
+
     <style name="TextAppearance.BottomNavigation.Overline" parent="TextAppearance.MaterialComponents.Overline">
         <item name="android:textSize">8sp</item>
     </style>
+
 
 </resources>

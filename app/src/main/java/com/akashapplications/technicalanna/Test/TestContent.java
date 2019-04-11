@@ -13,19 +13,16 @@ import com.akashapplications.technicalanna.R;
 
 public class TestContent extends AppCompatActivity {
     ListView listView;
-    SubjectExams subjectExams = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_content);
 
-        subjectExams = (SubjectExams) getIntent().getSerializableExtra("subject");
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle(subjectExams.getName());
+        getSupportActionBar().setTitle(getIntent().getStringExtra("subject  "));
 
         listView = findViewById(R.id.listview);
 

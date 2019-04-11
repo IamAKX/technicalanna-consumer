@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "504832530577",
+    "firebase_url": "https://technical-anna.firebaseio.com",
+    "project_id": "technical-anna",
+    "storage_bucket": "technical-anna.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504832530577:android:e71bff08a176529e",
+        "android_client_info": {
+          "package_name": "com.akashapplications.technicalanna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504832530577-3br3o7npu4vdt20sd6u9voppaoetd3jj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akashapplications.technicalanna",
+            "certificate_hash": "e07ed28b872b378629e5dfc83b9c75cd1c0d73d6"
+          }
+        },
+        {
+          "client_id": "504832530577-rrk976v95frjnh8562lupjf703221jt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akashapplications.technicalanna",
+            "certificate_hash": "45522d5840acaa5a384a65ea783b9b4c8f3a68da"
+          }
+        },
+        {
+          "client_id": "504832530577-47dsc8quvfeepi804sm0ispmm9mae7t3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB97Deb2utfXSTpZD5uvcMvKOwrGtcmsRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504832530577-47dsc8quvfeepi804sm0ispmm9mae7t3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504832530577:android:92b6a87daf177644",
+        "android_client_info": {
+          "package_name": "com.akashapplications.technicalannaadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504832530577-tsrcu8m11g5f195b1oksdprepdjl10mr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akashapplications.technicalannaadmin",
+            "certificate_hash": "e07ed28b872b378629e5dfc83b9c75cd1c0d73d6"
+          }
+        },
+        {
+          "client_id": "504832530577-d3h04sb6c324t71f9rkgvoir7rad8s7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akashapplications.technicalannaadmin",
+            "certificate_hash": "45522d5840acaa5a384a65ea783b9b4c8f3a68da"
+          }
+        },
+        {
+          "client_id": "504832530577-47dsc8quvfeepi804sm0ispmm9mae7t3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB97Deb2utfXSTpZD5uvcMvKOwrGtcmsRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504832530577-47dsc8quvfeepi804sm0ispmm9mae7t3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

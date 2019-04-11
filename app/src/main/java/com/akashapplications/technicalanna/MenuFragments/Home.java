@@ -109,7 +109,7 @@ public class Home extends Fragment {
                     Toast.makeText(context,"Subject is not available",Toast.LENGTH_SHORT).show();
                     return;
                 }
-                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
+//                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
             }
         });
 
@@ -122,7 +122,7 @@ public class Home extends Fragment {
                     Toast.makeText(context,"Subject is not available",Toast.LENGTH_SHORT).show();
                     return;
                 }
-                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
+//                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
             }
         });
 
@@ -135,7 +135,7 @@ public class Home extends Fragment {
                     Toast.makeText(context,"Subject is not available",Toast.LENGTH_SHORT).show();
                     return;
                 }
-                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
+//                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
             }
         });
 
@@ -148,7 +148,7 @@ public class Home extends Fragment {
                     Toast.makeText(context,"Subject is not available",Toast.LENGTH_SHORT).show();
                     return;
                 }
-                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
+//                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",se));
             }
         });
     }
@@ -194,6 +194,7 @@ public class Home extends Fragment {
 
         for(Exams e : examList)
         {
+            final String examName = e.getName();
             View button = getLayoutInflater().inflate(R.layout.main_exams_item, null);
             ImageView iv = button.findViewById(R.id.exam_icon);
             TextView tv = button.findViewById(R.id.exam_name);
@@ -206,7 +207,8 @@ public class Home extends Fragment {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context,"Not designed yet",Toast.LENGTH_SHORT).show();
+                    context.startActivity(new Intent(context, TestContent.class).putExtra("subject",examName));
+
                 }
             });
             allExamsContainer.addView(button);

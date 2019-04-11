@@ -1,0 +1,101 @@
+JSONObject params = new JSONObject();
+try {
+
+
+} catch (JSONException e) {
+    e.printStackTrace();
+}
+
+JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, URL, params,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        Log.i("checking",response.toString());
+                        Toast.makeText(context,"Liked", Toast.LENGTH_SHORT).show();
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                NetworkResponse networkResponse = error.networkResponse;
+
+                Toast.makeText(context,String.valueOf(networkResponse.data), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        jsonObjectRequest.setShouldCache(false);
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+        ));
+        RequestQueue requestQueue = RequestQueueSingleton.getInstance(context)
+                .getRequestQueue();
+        requestQueue.getCache().clear();
+        requestQueue.add(jsonObjectRequest);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, API.FETCH_PROFILE_DETAILS,
+                                new Response.Listener<String>() {
+                                    @Override
+                                    public void onResponse(String response) {
+                                        //If we are getting success from server
+
+                                    }
+                                },
+                                new Response.ErrorListener() {
+                                    @Override
+                                    public void onErrorResponse(VolleyError error) {
+                                        //You can handle error here if you want
+
+                                        NetworkResponse networkResponse = error.networkResponse;
+
+
+                                    }
+                                }) {
+                            @Override
+                            public Map<String, String> getHeaders() throws AuthFailureError {
+                                Map<String,String> params = new HashMap<>();
+                                return params;
+                            }
+                            @Override
+                            protected Map<String, String> getParams() throws AuthFailureError {
+                                Map<String, String> params = new HashMap<>();
+                                //Adding parameters to request
+
+                                return params;
+                            }
+                        };
+
+                        //Adding the string request to the queue
+                        stringRequest.setShouldCache(false);
+                        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                                0,
+                                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+                        ));
+                        RequestQueue requestQueue = Volley.newRequestQueue(getBaseContext());
+                        requestQueue.getCache().clear();
+                        requestQueue.add(stringRequest);

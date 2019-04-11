@@ -1,6 +1,7 @@
     package com.akashapplications.technicalanna;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -11,21 +12,51 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akashapplications.technicalanna.LocalData.UserData;
 import com.akashapplications.technicalanna.MenuFragments.Exams;
 import com.akashapplications.technicalanna.MenuFragments.Home;
 import com.akashapplications.technicalanna.MenuFragments.Notification;
 import com.akashapplications.technicalanna.MenuFragments.Wallet;
 import com.akashapplications.technicalanna.PersonalMenu.Profile;
+import com.akashapplications.technicalanna.Utils.API;
+import com.akashapplications.technicalanna.Utils.RequestQueueSingleton;
+import com.akashapplications.technicalanna.Utils.Tokens;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.yarolegovich.lovelydialog.LovelyStandardDialog;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
     public class MainContainer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FragmentManager fragmentManager;
+    TextView email, name;
+    ImageView imageView;
+    private GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +82,49 @@ import com.akashapplications.technicalanna.PersonalMenu.Profile;
         findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                new UserData(getBaseContext()).logOut();
+                Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
+                        new ResultCallback<Status>() {
+                            @Override
+                            public void onResult(Status status) {
+
+                            }
+                        });
                 startActivity(new Intent(getBaseContext(),Login.class));
                 finish();
             }
         });
+
+//        View navHeaderView = navigationView.inflateHeaderView(R.layout.nav_header_main_container);
+        View navHeaderView = navigationView.getHeaderView(0);
+        name = navHeaderView.findViewById(R.id.name);
+        email = navHeaderView.findViewById(R.id.email);
+        imageView = navHeaderView.findViewById(R.id.imageView);
+
+        UserData data = new UserData(getBaseContext());
+        name.setText(data.getName());
+        email.setText(data.getEmail());
+        Glide.with(getBaseContext())
+                .load(data.getImage())
+                .apply(RequestOptions.circleCropTransform())
+                .into(imageView);
+
+        new GetUserDetail().execute();
+
     }
+
+        @Override
+        protected void onStart() {
+            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestEmail()
+                    .build();
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                    .build();
+            mGoogleApiClient.connect();
+            super.onStart();
+
+        }
 
     boolean doubleBackToExitPressedOnce = false;
 
@@ -179,4 +248,71 @@ import com.akashapplications.technicalanna.PersonalMenu.Profile;
     }
 
 
-}
+        private class GetUserDetail extends AsyncTask<Void,Void,Void> {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                JSONObject reqBody = new JSONObject();
+                try {
+                    reqBody.put("email",new UserData(getBaseContext()).getEmail());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, API.GET_PROFILE_DETAIL, reqBody,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                Log.e(Tokens.LOG, response.toString());
+                                UserData data = new UserData(getBaseContext());
+                                try {
+                                    if (response.has("user_id"))
+                                        data.setUserID(response.getString("user_id"));
+                                    if (response.has("phone"))
+                                        data.setPhone(response.getString("phone"));
+                                    if (response.has("isPhoneVerified"))
+                                        data.setPhoneVerified(response.getBoolean("isPhoneVerified"));
+                                    if (response.has("image"))
+                                        data.setImage(response.getString("image"));
+                                    if (response.has("email"))
+                                        data.setEmail(response.getString("email"));
+                                    if (response.has("name"))
+                                        data.setName(response.getString("name"));
+                                    if(response.has("isEmailVerified"))
+                                        data.setEmailVerified(response.getBoolean("isEmailVerified"));
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                                name.setText(data.getName());
+                                email.setText(data.getEmail());
+                                Glide.with(getBaseContext())
+                                        .load(data.getImage())
+                                        .apply(RequestOptions.circleCropTransform())
+                                        .into(imageView);
+
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        NetworkResponse networkResponse = error.networkResponse;
+                        Toast.makeText(getBaseContext(), new String(networkResponse.data), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                jsonObjectRequest.setShouldCache(false);
+                jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        0,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+                ));
+                RequestQueue requestQueue = RequestQueueSingleton.getInstance(getBaseContext())
+                        .getRequestQueue();
+                requestQueue.getCache().clear();
+                requestQueue.add(jsonObjectRequest);
+
+                return null;
+            }
+        }
+    }

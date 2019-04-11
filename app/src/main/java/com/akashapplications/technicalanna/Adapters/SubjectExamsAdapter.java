@@ -52,7 +52,7 @@ public class SubjectExamsAdapter extends RecyclerView.Adapter<SubjectExamsAdapte
         viewHolder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",list.get(position)));
+//                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",list.get(position)));
             }
         });
     }

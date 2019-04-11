@@ -53,18 +53,18 @@ public class AppIntro extends AppIntro2{
         setDepthAnimation();
 
 
-        sliderPage = new SliderPage();
-        sliderPage.setTitle("Exercise on the go");
-        sliderPage.setTitleColor(Color.parseColor("#000000"));
-        sliderPage.setDescription("Practice anytime , anywhere");
-        sliderPage.setDescColor(Color.parseColor("#01579b"));
-        sliderPage.setDescTypeface("font/aller.ttf");
-        sliderPage.setImageDrawable(R.drawable.student);
-        sliderPage.setBgColor(getResources().getColor(R.color.into2));
-        addSlide(AppIntroFragment.newInstance(sliderPage));
-        showSkipButton(false);
-        setProgressButtonEnabled(true);
-        setDepthAnimation();
+//        sliderPage = new SliderPage();
+//        sliderPage.setTitle("Exercise on the go");
+//        sliderPage.setTitleColor(Color.parseColor("#000000"));
+//        sliderPage.setDescription("Practice anytime , anywhere");
+//        sliderPage.setDescColor(Color.parseColor("#01579b"));
+//        sliderPage.setDescTypeface("font/aller.ttf");
+//        sliderPage.setImageDrawable(R.drawable.student);
+//        sliderPage.setBgColor(getResources().getColor(R.color.into2));
+//        addSlide(AppIntroFragment.newInstance(sliderPage));
+//        showSkipButton(false);
+//        setProgressButtonEnabled(true);
+//        setDepthAnimation();
 
     }
 

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile.EmailVerification">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/circle_1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/circle_2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="-40dp"
+        android:src="@drawable/circle_2" />
+
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/app_logo" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-60dp"
+        android:layout_marginBottom="-10dp"
+        android:src="@drawable/circle_1" />
+
+
+    <RelativeLayout
+        android:id="@+id/phoneLogoLayout"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:indeterminate="true"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBar"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:tint="#fff"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle"
+            android:src="@android:drawable/ic_dialog_email"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_below="@+id/phoneLogoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:text="Enter the OTP sent in verification email\nIn-case you dom'nt find OTP in INBOX, check your SPAM folder. OTP is valid for 10 minutes."/>
+
+    <com.mukesh.OtpView
+        android:layout_below="@+id/prompt"
+        android:id="@+id/otp_view"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:enabled="true"
+        android:itemBackground="@color/blue_white"
+        android:textColor="@color/colorAccent"
+        app:itemCount="6"
+        app:lineColor="@color/blue_button"
+        app:viewType="rectangle"
+        >
+        <requestFocus />
+    </com.mukesh.OtpView>
+
+
+</RelativeLayout>

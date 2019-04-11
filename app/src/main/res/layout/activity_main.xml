@@ -167,42 +167,43 @@
                 android:orientation="horizontal">
 
                 <mehdi.sakout.fancybuttons.FancyButton
-                    android:id="@+id/loginFacebookBtn"
+                    android:id="@+id/loginGoogleBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="10dp"
-                    fancy:fb_borderColor="#FFFFFF"
+                    android:padding="10dp"
+                    fancy:fb_borderColor="#FFC9352C"
                     fancy:fb_borderWidth="1dp"
-                    fancy:fb_defaultColor="#ffffff"
+                    fancy:fb_defaultColor="@android:color/transparent"
                     fancy:fb_focusColor="#80DD4B39"
                     fancy:fb_iconPosition="left"
                     fancy:fb_radius="5dp"
                     fancy:fb_text="Google"
+                    fancy:fb_iconResource="@drawable/google"
                     fancy:fb_textColor="#dd4b39" />
 
                 <mehdi.sakout.fancybuttons.FancyButton
-                    android:id="@+id/loginGoogleBtn"
+                    android:id="@+id/loginFacebookBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="10dp"
-                    fancy:fb_borderColor="#FFFFFF"
+                    android:padding="10dp"
+                    fancy:fb_borderColor="#3b5998"
                     fancy:fb_borderWidth="1dp"
-                    fancy:fb_defaultColor="#ffffff"
+                    fancy:fb_defaultColor="@android:color/transparent"
                     fancy:fb_focusColor="#803B5998"
                     fancy:fb_iconPosition="left"
                     fancy:fb_radius="5dp"
                     fancy:fb_text="Facebook"
+                    fancy:fb_iconResource="@drawable/facebook"
                     fancy:fb_textColor="#3b5998" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout

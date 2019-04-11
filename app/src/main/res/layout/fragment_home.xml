@@ -130,6 +130,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:layout_margin="2dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
                                 android:background="@color/colorPrimary"
                                 android:text="Strength of materials"
                                 android:textSize="12sp"
@@ -152,6 +154,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:layout_margin="2dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
                                 android:text="Geo-technical Engineering"
                                 android:background="#ffffff"
                                 android:textSize="12sp"
@@ -184,6 +188,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:layout_margin="2dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
                                 android:text="General Knowledge"
                                 android:background="#ffffff"
                                 android:textSize="12sp"
@@ -207,6 +213,8 @@
                                 android:gravity="center"
                                 android:layout_margin="2dp"
                                 android:text="Marathi"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
                                 android:background="#ffffff"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -235,32 +243,63 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <ImageButton
+            <LinearLayout
                 android:layout_weight="1"
-                android:tint="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/daily_dose"
-                android:background="@android:color/transparent"
-                android:padding="10dp"/>
+                android:orientation="vertical">
+                <ImageButton
+                    android:tint="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/daily_dose"
+                    android:background="@android:color/transparent"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Home"/>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageButton
-                android:layout_weight="1"
                 android:tint="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/exam"
                 android:background="@android:color/transparent"
                 android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Booster"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageButton
-                android:layout_weight="1"
                 android:tint="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/support"
                 android:background="@android:color/transparent"
                 android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Support"/>
+        </LinearLayout>
 
         </LinearLayout>
 
