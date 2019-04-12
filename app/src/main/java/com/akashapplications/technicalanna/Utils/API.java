@@ -12,4 +12,5 @@ public class API {
     public static final String GET_PROFILE_DETAIL = BASE_URL + "profileApp/v1/profile/getProfileDetail";
     public static final String DELETE_PROFILE = BASE_URL + "profileApp/v1/profile/deleteAccount";
     public static final String TRIGGER_EMAIL = BASE_URL + "profileApp/v1/profile/triggerOtpEmail";
+    public static final String UPDATE_PASSWORD = BASE_URL + "profileApp/v1/profile/updatePassword";
 }

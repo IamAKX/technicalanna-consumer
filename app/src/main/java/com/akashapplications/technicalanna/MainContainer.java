@@ -54,8 +54,8 @@ import org.json.JSONObject;
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FragmentManager fragmentManager;
-    TextView email, name;
-    ImageView imageView;
+    public static TextView email, name;
+    public static ImageView imageView;
     private GoogleApiClient mGoogleApiClient;
 
     @Override
@@ -90,7 +90,7 @@ import org.json.JSONObject;
 
                             }
                         });
-                startActivity(new Intent(getBaseContext(),Login.class));
+                startActivity(new Intent(getBaseContext(),Login.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 finish();
             }
         });
@@ -106,7 +106,9 @@ import org.json.JSONObject;
         email.setText(data.getEmail());
         Glide.with(getBaseContext())
                 .load(data.getImage())
-                .apply(RequestOptions.circleCropTransform())
+                .apply(RequestOptions.circleCropTransform()
+                        .placeholder(R.drawable.user)
+                        .error(R.drawable.user))
                 .into(imageView);
 
         new GetUserDetail().execute();

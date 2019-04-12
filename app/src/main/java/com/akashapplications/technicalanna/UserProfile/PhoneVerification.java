@@ -37,7 +37,7 @@ import java.util.concurrent.TimeUnit;
 public class PhoneVerification extends Activity {
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-
+    String phoneNumber = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,10 +50,14 @@ public class PhoneVerification extends Activity {
                 android.graphics.PorterDuff.Mode.SRC_IN);
 
 
+        if(getIntent().getExtras().containsKey("phone"))
+            phoneNumber = getIntent().getStringExtra("phone");
+        else
+            phoneNumber = new UserData(getBaseContext()).getPhone();
         setCallBack();
 
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+91"+ new UserData(getBaseContext()).getPhone(),        // Phone number to verify
+                "+91"+ phoneNumber,        // Phone number to verify
                 120,                 // Timeout duration
                 TimeUnit.SECONDS,   // Unit of timeout
                 this,               // Activity (for callback binding)
@@ -69,8 +73,15 @@ public class PhoneVerification extends Activity {
                     InternetConnectivity.showPrompt(getBaseContext());
                     return;
                 }
-
-                new VerifyPhone().execute();
+                if(getIntent().getExtras().containsKey("phone"))
+                {
+                    startActivity(new Intent(getBaseContext(),PasswordRecoverySecond.class).putExtra("email",getIntent().getStringExtra("email")));
+                    finish();
+                }
+                else
+                {
+                    new VerifyPhone().execute();
+                }
             }
 
             @Override
@@ -83,6 +94,7 @@ public class PhoneVerification extends Activity {
                 else if(e instanceof FirebaseTooManyRequestsException)
                 {
                     Toast.makeText(getBaseContext(),"SMS Quota exceeded",Toast.LENGTH_SHORT).show();
+
                 }
 
             }

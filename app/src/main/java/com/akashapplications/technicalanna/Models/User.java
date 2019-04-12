@@ -3,8 +3,7 @@ package com.akashapplications.technicalanna.Models;
 import org.json.JSONArray;
 
 public class User {
-    String name, email, userID, phone, image;
-    JSONArray social;
+    String name, email, userID, phone, image, social;
     boolean isPhoneVerified, isEmailVerified;
 
     public String getName() {
@@ -47,11 +46,11 @@ public class User {
         this.image = image;
     }
 
-    public JSONArray getSocial() {
+    public String getSocial() {
         return social;
     }
 
-    public void setSocial(JSONArray social) {
+    public void setSocial(String social) {
         this.social = social;
     }
 

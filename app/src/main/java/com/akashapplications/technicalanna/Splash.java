@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 
+import com.akashapplications.technicalanna.LocalData.FirstLaunch;
+import com.akashapplications.technicalanna.LocalData.UserData;
+
 public class Splash extends Activity {
 
     @Override
@@ -19,8 +22,21 @@ public class Splash extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(getBaseContext(),AppIntro.class));
-                        finish();
+                        if(new FirstLaunch(getBaseContext()).idFirstTime()) {
+                            new FirstLaunch(getBaseContext()).setFirstTime(false);
+                            startActivity(new Intent(getBaseContext(), AppIntro.class));
+                            finish();
+                        }
+                        else
+                            if(new UserData(getBaseContext()).idLoggedIn())
+                            {
+                                startActivity(new Intent(getBaseContext(), MainContainer.class));
+                                finish();
+                            }
+                            else {
+                                startActivity(new Intent(getBaseContext(), Login.class));
+                                finish();
+                            }
                     }
                 });
             }
