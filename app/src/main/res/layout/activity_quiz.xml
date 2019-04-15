@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
+    tools:context=".HelperActivity.Quiz">
+
+    <LinearLayout
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:gravity="center|right"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:backgroundTint="#A2E7E7"
+        android:layout_marginTop="-30dp"
+        android:layout_marginLeft="-30dp"
+        android:background="@drawable/circle_1">
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/blue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Full Marks"
+            android:textSize="9sp"/>
+        <TextView
+            android:id="@+id/marks"
+            android:textColor="@color/blue_button"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="100"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:id="@+id/timerLayout"
+        android:padding="15dp">
+
+        <com.budiyev.android.circularprogressbar.CircularProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:animateProgress="true"
+            app:backgroundStrokeColor="#FFCCF0F0"
+            app:backgroundStrokeWidth="2dp"
+            app:drawBackgroundStroke="false"
+            app:foregroundStrokeCap="round"
+            app:foregroundStrokeColor="@color/dark_blue"
+            app:foregroundStrokeWidth="3dp"
+            app:indeterminate="false"
+            app:indeterminateRotationAnimationDuration="1200"
+            app:indeterminateSweepAnimationDuration="600"
+            app:indeterminateMinimumAngle="45"
+            app:maximum="100"
+            app:progress="0"
+            app:progressAnimationDuration="100"
+            app:startAngle="270"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00 : 00"/>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="#fff"
+        android:layout_below="@+id/timerLayout">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="20dp"
+                android:background="#EEFCFB"
+                android:gravity="center"
+                android:text="abc"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                fancy:fb_borderColor="#83aae5"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#ffffff"
+                fancy:fb_focusColor="#8083aae5"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="Option 1"
+                fancy:fb_textColor="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                fancy:fb_borderColor="#83aae5"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#ffffff"
+                fancy:fb_focusColor="#8083aae5"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="Option 1"
+                fancy:fb_textColor="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                fancy:fb_borderColor="#83aae5"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#ffffff"
+                fancy:fb_focusColor="#8083aae5"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="Option 1"
+                fancy:fb_textColor="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                fancy:fb_borderColor="#83aae5"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#ffffff"
+                fancy:fb_focusColor="#8083aae5"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="Option 1"
+                fancy:fb_textColor="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                />
+
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/next"
+                android:layout_gravity="right"
+                android:layout_marginRight="-5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:paddingRight="25dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                fancy:fb_borderColor="#83aae5"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#83aae5"
+                fancy:fb_focusColor="#8083aae5"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="NEXT"
+                fancy:fb_textColor="#ffffff"
+                android:layout_alignParentBottom="true"
+                />
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:elevation="7dp"
+        android:text="100"
+        android:id="@+id/questionNo"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/timerLayout"
+        android:background="@drawable/circle"/>
+</RelativeLayout>

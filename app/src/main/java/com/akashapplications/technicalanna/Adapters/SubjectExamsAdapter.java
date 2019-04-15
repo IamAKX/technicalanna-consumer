@@ -8,22 +8,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.akashapplications.technicalanna.Models.SubjectExams;
 import com.akashapplications.technicalanna.R;
-import com.akashapplications.technicalanna.Test.TestContent;
+import com.akashapplications.technicalanna.SubMenuActivity.SubjectWiseExam.SubjectAllExam;
 import com.akashapplications.technicalanna.Utils.Dummy;
-import com.dinuscxj.progressbar.CircleProgressBar;
 
 import java.util.ArrayList;
 
 public class SubjectExamsAdapter extends RecyclerView.Adapter<SubjectExamsAdapter.ViewHolder>{
     private Context context;
-    private ArrayList<SubjectExams> list;
+    private ArrayList<String> list;
 
-    public SubjectExamsAdapter(Context context, ArrayList<SubjectExams> list) {
+    public SubjectExamsAdapter(Context context, ArrayList<String> list) {
         this.context = context;
         this.list = list;
     }
@@ -38,21 +35,21 @@ public class SubjectExamsAdapter extends RecyclerView.Adapter<SubjectExamsAdapte
     @Override
     public void onBindViewHolder(@NonNull SubjectExamsAdapter.ViewHolder viewHolder, final int position) {
 
-        viewHolder.progressBar.setProgress(list.get(position).getProgress());
-        viewHolder.progressBar.setProgressFormatter(new CircleProgressBar.ProgressFormatter() {
-            @Override
-            public CharSequence format(int progress, int max) {
-                return String.format("%d%%", (int) ((float) progress / (float) max * 100));
-            }
-        });
 
-        viewHolder.subject.setText(list.get(position).getName());
-        viewHolder.background.setBackgroundColor(Dummy.generateRandomColor());
+
+        viewHolder.subject.setText(list.get(position));
+        viewHolder.card.setBackgroundColor(Dummy.generateRandomColor());
 
         viewHolder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                context.startActivity(new Intent(context, TestContent.class).putExtra("subject",list.get(position)));
+                context.startActivity(new Intent(context, SubjectAllExam.class).putExtra("subject",list.get(position)));
+            }
+        });
+        viewHolder.subject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, SubjectAllExam.class).putExtra("subject",list.get(position)));
             }
         });
     }
@@ -63,15 +60,11 @@ public class SubjectExamsAdapter extends RecyclerView.Adapter<SubjectExamsAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        CircleProgressBar progressBar;
         TextView subject;
         CardView card;
-        RelativeLayout background;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            progressBar = itemView.findViewById(R.id.progressBar);
-            subject = itemView.findViewById(R.id.subjectName);
-            background = itemView.findViewById(R.id.progressBackground);
+            subject = itemView.findViewById(R.id.textview);
             card = itemView.findViewById(R.id.card);
         }
     }

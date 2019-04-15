@@ -1,15 +1,8 @@
 package com.akashapplications.technicalanna.Utils;
 
 import android.graphics.Color;
-import android.util.Log;
 
-import com.akashapplications.technicalanna.Login;
-import com.akashapplications.technicalanna.Models.SubjectExams;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Dummy {
     public static String[] bannerImages = {

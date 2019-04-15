@@ -15,7 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".UserProfile.PasswordRecoverySecond"></activity>
+        <activity android:name=".PersonalMenu.Wallet"></activity>
+        <activity android:name=".HelperActivity.ExamSummary" />
+        <activity android:name=".HelperActivity.Quiz" />
+        <activity android:name=".HelperActivity.ExamPreview" />
+        <activity android:name=".SubMenuActivity.FullLengthExams.FullLengthAllExams" />
+        <activity android:name=".SubMenuActivity.SubjectWiseExam.SubjectAllExam" />
+        <activity android:name=".SubMenuActivities.SubMenuActivity.AllExams" />
+        <activity android:name=".HelperActivity.TopperTipFull" />
+        <activity android:name=".UserProfile.PasswordRecoverySecond" />
         <activity android:name=".UserProfile.PasswordRecoveryFirst" />
         <activity
             android:name=".UserProfile.EmailVerification"
@@ -41,14 +49,6 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"
-            tools:replace="android:value" />
-        <meta-data
-            android:name="com.facebook.sdk.AutoLogAppEventEnabled"
-            android:value="false" />
     </application>
 
 </manifest>

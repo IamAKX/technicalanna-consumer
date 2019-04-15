@@ -12,12 +12,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,8 +24,8 @@ import com.akashapplications.technicalanna.LocalData.UserData;
 import com.akashapplications.technicalanna.MenuFragments.Exams;
 import com.akashapplications.technicalanna.MenuFragments.Home;
 import com.akashapplications.technicalanna.MenuFragments.Notification;
-import com.akashapplications.technicalanna.MenuFragments.Wallet;
 import com.akashapplications.technicalanna.PersonalMenu.Profile;
+import com.akashapplications.technicalanna.PersonalMenu.Wallet;
 import com.akashapplications.technicalanna.Utils.API;
 import com.akashapplications.technicalanna.Utils.RequestQueueSingleton;
 import com.akashapplications.technicalanna.Utils.Tokens;
@@ -45,7 +43,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.yarolegovich.lovelydialog.LovelyStandardDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -220,9 +217,7 @@ import org.json.JSONObject;
                 break;
 
             case R.id.nav_wallet:
-                fragment = new Wallet();
-                getSupportActionBar().setTitle("Wallet");
-                changeFragment(fragment);
+                startActivity(new Intent(getBaseContext(), Wallet.class));
                 break;
 
             case R.id.nav_profile:

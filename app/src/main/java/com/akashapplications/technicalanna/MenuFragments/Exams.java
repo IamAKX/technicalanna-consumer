@@ -11,12 +11,9 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.akashapplications.technicalanna.Adapters.SubjectExamsAdapter;
-import com.akashapplications.technicalanna.Models.SubjectExams;
 import com.akashapplications.technicalanna.R;
-import com.akashapplications.technicalanna.Utils.Dummy;
 import com.akashapplications.technicalanna.Utils.Subjects;
 
 import java.util.ArrayList;
@@ -26,7 +23,7 @@ import java.util.ArrayList;
  */
 public class Exams extends Fragment {
 
-    ArrayList<SubjectExams> list = new ArrayList<>();
+    ArrayList<String> list = new ArrayList<>();
     RecyclerView recyclerView;
     SubjectExamsAdapter adapter;
     Context context;
@@ -49,7 +46,7 @@ public class Exams extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         recyclerView = getView().findViewById(R.id.recycleView);
-        list.addAll(Subjects.getAllSubject());
+        list = Subjects.getAllSubject();
         adapter = new SubjectExamsAdapter(context, list);
         initRecycler();
     }

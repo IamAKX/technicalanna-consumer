@@ -357,7 +357,7 @@ public class Profile extends Activity {
                         @Override
                         public void onResponse(JSONObject response) {
                             progressDialog.dismiss();
-
+                            new UserData(getBaseContext()).logOut();
                             Toast.makeText(getBaseContext(),"Account Deleted",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getBaseContext(), Registeration.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 

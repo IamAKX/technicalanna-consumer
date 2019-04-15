@@ -265,35 +265,7 @@ public class Login extends AppCompatActivity {
                                 new SocialRegisteration(reqBody).execute();
                             }
 
-//                            Log.e(Tokens.LOG, user.getEmail());
-//                            try {
-//                                JSONObject reqBody = new JSONObject();
-//                                reqBody.put("name", user.getDisplayName());
-//                                reqBody.put("email", user.getEmail());
-//                                reqBody.put("password", "");
-//                                reqBody.put("phone", user.getPhoneNumber());
-//                                reqBody.put("image", user.getPhotoUrl().toString());
-//                                reqBody.put("social", "Google");
-//                                reqBody.put("type", "social");
-//
-//                                if (user.getPhoneNumber() == null) {
-//                                    triggerPhoneAlert();
-//                                    if (phoneNumber != "" && phoneNumber.length() == 10)
-//                                        reqBody.put("phone", phoneNumber);
-//                                    else
-//                                        reqBody.put("phone","");
-//
-//                                }
-//                                if (reqBody.getString("phone").length() == 10)
-//                                    new SocialRegisteration(reqBody).execute();
-//                                else
-//                                {
-//                                    Toast.makeText(getBaseContext(),"Failed to validate phone, Please login again",Toast.LENGTH_SHORT).show();
-//                                    progressBar.setVisibility(View.GONE);
-//                                }
-//                            } catch (JSONException e) {
-//                                e.printStackTrace();
-//                            }
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(getBaseContext(), "Authentication Failed", Toast.LENGTH_SHORT).show();
