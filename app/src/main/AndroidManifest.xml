@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PersonalMenu.Wallet"></activity>
+        <activity android:name=".SubMenuActivity.FullLengthExams.FullLengthNotification"></activity>
+        <activity android:name=".PersonalMenu.Wallet" />
         <activity android:name=".HelperActivity.ExamSummary" />
         <activity android:name=".HelperActivity.Quiz" />
         <activity android:name=".HelperActivity.ExamPreview" />
