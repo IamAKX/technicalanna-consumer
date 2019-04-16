@@ -263,11 +263,13 @@
             </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/booster"
                 android:tint="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -288,6 +290,7 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/support"
                 android:tint="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

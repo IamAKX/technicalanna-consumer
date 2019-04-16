@@ -6,26 +6,110 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="checking" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1a8517e-2f0c-4cc6-9349-56651855f43d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_notification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_exifinterface_27_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_davemorrissey_labs_subsampling_scale_image_view_3_10_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_android_pdf_viewer_2_0_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_android_pdf_viewer_2_8_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_pdf_view_pager_1_0_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_pdfium_android_1_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_pdfium_android_1_4_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_pdfium_android_1_7_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_castorflex_verticalviewpager_library_19_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_chrisbanes_PhotoView_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hsmnzaydn_imagezoom_1_2_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_16_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_16_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_17_1_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_17_6_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_16_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_karumi_dexter_5_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_paytm_pgplussdk_1_3_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__es_voghdev_pdfviewpager_library_1_0_6_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/BoosterContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/Boosters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/PDFReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/BoosterModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/PaytmModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/PrevQPaperModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Service/FirebaseCloudMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Service/FirebaseIdService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthPrevYearQuestionPaper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Utils/JSONParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_money_bag_with_dollar_symbol.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/small_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booster_content.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_boosters.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_prev_year_question_paper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdfreader.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamPreview.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamPreview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MainContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MainContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Wallet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Test/TestContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Test/TestContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_preview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_wallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_wallet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_container_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_container_drawer.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,53 +159,54 @@
     <session id="-773956567">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="VollyFramework" value="1" />
-          <entry key="gradle" value="17" />
-          <entry key="java" value="181" />
+          <entry key="gradle" value="22" />
+          <entry key="java" value="221" />
           <entry key="jpeg" value="1" />
           <entry key="json" value="3" />
           <entry key="kt" value="1" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="107" />
+          <entry key="xml" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="17" />
+          <entry key="Groovy" value="22" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="181" />
+          <entry key="JAVA" value="221" />
           <entry key="JSON" value="3" />
           <entry key="Kotlin" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="107" />
+          <entry key="XML" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="20" />
-          <entry key="gradle" value="27" />
-          <entry key="java" value="13706" />
+          <entry key="gradle" value="57" />
+          <entry key="java" value="18120" />
           <entry key="txt" value="2" />
-          <entry key="xml" value="3619" />
+          <entry key="xml" value="3867" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="27" />
-          <entry key="JAVA" value="13706" />
+          <entry key="Groovy" value="57" />
+          <entry key="JAVA" value="18120" />
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="XML" value="3619" />
+          <entry key="XML" value="3867" />
         </counts>
       </usages-collector>
     </session>
@@ -129,42 +214,62 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/SubjectWiseExam/SubjectAllExam.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Wallet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+            <state relative-caret-position="480">
+              <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthNotification.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamPreview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="89" column="87" selection-start-line="89" selection-start-column="87" selection-end-line="89" selection-end-column="87" />
-              <folding>
-                <element signature="e#2979#4162#0" expanded="true" />
-                <element signature="e#4229#4625#0" expanded="true" />
-                <element signature="e#4624#4625#0" expanded="true" />
-                <element signature="e#4161#4162#0" expanded="true" />
-                <element signature="e#4164#4652#0" expanded="true" />
-                <element signature="e#4651#4652#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="315" column="109" selection-start-line="315" selection-start-column="109" selection-end-line="315" selection-end-column="109" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Test/TestContent.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="132" column="120" selection-start-line="132" selection-start-column="120" selection-end-line="132" selection-end-column="120" />
+            <state relative-caret-position="510">
+              <caret line="103" selection-start-line="103" selection-end-line="103" />
               <folding>
-                <element signature="e#4368#6032#0" expanded="true" />
-                <element signature="e#6031#6032#0" expanded="true" />
-                <element signature="e#6034#6522#0" expanded="true" />
-                <element signature="e#6521#6522#0" expanded="true" />
+                <element signature="e#3875#4353#0" expanded="true" />
+                <element signature="e#4352#4353#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="292" column="40" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_preview.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="179" selection-start-line="179" selection-end-line="179" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_wallet.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -182,16 +287,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>imagePath</find>
-      <find>M</find>
-      <find>DETAI</find>
-      <find>InternetConnectivity.isNetworkAvailable</find>
-      <find>getPhone()</find>
-      <find>loginForgetPassword</find>
-      <find>mGoogleApiClient</find>
-      <find>PasswordRec</find>
       <find>VerifyPhone</find>
-      <find>Glide</find>
       <find>slider</find>
       <find>faceboo</find>
       <find>Exams</find>
@@ -212,11 +308,21 @@
       <find>LovelyStan</find>
       <find>listView.setA</find>
       <find>LovelyPr</find>
+      <find>listView.setAdapter</find>
+      <find>Glide</find>
+      <find>placeho</find>
+      <find>LovelyTex</find>
+      <find>showNotification</find>
+      <find>Toas</find>
+      <find>hash</find>
+      <find>Toast</find>
+      <find>generate checksum start</find>
     </findStrings>
     <replaceStrings>
       <replace>list.add</replace>
       <replace>sec</replace>
       <replace>android:textSize=&quot;10sp&quot;</replace>
+      <replace>Wallet.this</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/src/main/java/com/</dir>
@@ -235,27 +341,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/User.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Utils/PasswordRecoveryFirst.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_password_recovery_first.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/UserProfile/PasswordRecoveryFirst.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_password_recovery_second.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/LocalData/FirstLaunch.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/UserProfile/PhoneVerification.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/UserProfile/PasswordRecoverySecond.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Login.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/TopperTipFull.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_topper_tip_full.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/TopperTipModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/TopperTipsModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/subject_exams_progress.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/SubjectExams.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivities/SubjectWiseExams/AllExams.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivities/SubMenuActivity/AllExams.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Utils/Subjects.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Exams.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/SubjectExamsModel.java" />
@@ -264,32 +349,53 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Adapters/ExamListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/exam_title_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/QuizModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_preview.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Splash.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_summary.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamSummary.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_quiz.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Home.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/SubjectWiseExam/SubjectAllExam.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_all_exams.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthAllExams.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/Quiz.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Profile.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Utils/API.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamPreview.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_wallet.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MainContainer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_container_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Wallet.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_notification.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_prev_year_question_paper.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthNotification.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/PrevQPaperModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pdfreader.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/PDFReader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Test/TestContent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthPrevYearQuestionPaper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_boosters.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/BoosterModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/Boosters.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_booster_content.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/BoosterContent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Payment/UPIForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Login.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/PaytmModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Utils/JSONParser.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_container_drawer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Service/FirebaseCloudMessagingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Service/FirebaseIdService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/small_icon.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MainContainer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_wallet.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Wallet.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_preview.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamPreview.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Home.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="824" />
@@ -302,24 +408,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TechnicalAnna_Client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TechnicalAnna_Client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TechnicalAnna_Client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TechnicalAnna_Client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -343,21 +431,7 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="technicalanna" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Adapters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TechnicalAnna_Client" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="technicalanna" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="HelperActivity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TechnicalAnna_Client" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="technicalanna" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="LocalData" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TechnicalAnna_Client" type="1abcf292:AndroidViewProjectNode" />
@@ -391,21 +465,7 @@
             <path>
               <item name="TechnicalAnna_Client" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="technicalanna" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="SubMenuActivity" type="462c0819:PsiDirectoryNode" />
-              <item name="SubjectWiseExam" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TechnicalAnna_Client" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="TechnicalAnna_Client" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="TechnicalAnna_Client" type="1abcf292:AndroidViewProjectNode" />
@@ -415,6 +475,24 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TechnicalAnna_Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TechnicalAnna_Client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="TechnicalAnna_Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TechnicalAnna_Client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,21 +500,22 @@
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
-    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/akash/Documents/AndroidStudioProjects/TechnicalAnna/TechnicalAnna_Client/app/src/main/res/layout/activity_booster_content.xml" />
+    <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="RZ8M304L45F" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
+      <recent name="com.akashapplications.technicalanna.Payment" />
+      <recent name="com.akashapplications.technicalanna.HelperActivity" />
       <recent name="com.akashapplications.technicalanna.SubMenuActivity.FullLengthExams" />
       <recent name="com.akashapplications.technicalanna.PersonalMenu" />
-      <recent name="com.akashapplications.technicalanna.HelperActivity" />
       <recent name="com.akashapplications.technicalanna.SubMenuActivity.SubjectWiseExam" />
-      <recent name="com.akashapplications.technicalanna.SubMenuActivities.SubjectWiseExams" />
     </key>
     <key name="android.template.parentActivityClass">
       <recent name="" />
@@ -445,6 +524,7 @@
       <recent name="com.akashapplications.technicalanna.Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Service" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
@@ -571,27 +651,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="0" />
+    <frame x="0" y="24" width="1440" height="824" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21816881" />
-      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Captures" order="0" sideWeight="0.50240386" side_tool="true" weight="0.21816881" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49759614" visible="true" weight="0.21816881" />
+      <window_info id="Structure" order="2" sideWeight="0.50240386" side_tool="true" weight="0.21816881" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.329235" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.431694" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.329235" />
-      <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.329235" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5007153" side_tool="true" weight="0.329235" />
-      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49928468" visible="true" weight="0.329235" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.329235" />
+      <window_info anchor="bottom" id="TODO" order="1" weight="0.329235" />
+      <window_info anchor="bottom" id="Debug" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.329235" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5007153" side_tool="true" weight="0.329235" />
+      <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.4985694" weight="0.329235" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.329235" />
+      <window_info anchor="bottom" x="21" y="277" width="1398" height="316" id="Logcat" order="9" sideWeight="0.50143063" weight="0.329235" />
       <window_info anchor="right" id="Assistant" order="0" weight="0.3297568" />
       <window_info anchor="right" id="Device File Explorer" order="1" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
@@ -639,197 +719,10 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/GlobalConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/TopperTipModel.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/TopperTipsModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_topper_tip_full.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/TopperTipFull.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/Exams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivities/SubMenuActivity/AllExams.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_exams.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/as.kt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/ds.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/subject_exams_progress.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Utils/Subjects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test_content.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="49" selection-start-line="9" selection-start-column="4" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/exam_title_item.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="214" column="53" selection-start-line="214" selection-start-column="46" selection-end-line="214" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_password_recovery_first.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registeration.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="55" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/SubjectExamsModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/QuizModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="56" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Splash.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-          <folding>
-            <element signature="e#519#1629#0" expanded="true" />
-            <element signature="e#661#1603#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1628#1629#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_preview.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="174" column="47" selection-start-line="162" selection-start-column="12" selection-end-line="174" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding>
-            <element signature="e#816#958#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,19 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="199" column="45" selection-start-line="199" selection-start-column="45" selection-end-line="199" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,97 +778,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="359" column="68" selection-start-line="359" selection-start-column="68" selection-end-line="359" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wallet.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wallet.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Wallet.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_notification.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="115" column="17" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="115" selection-end-column="17" />
+        <state relative-caret-position="352">
+          <caret line="38" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_wallet.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <element signature="e#1813#1843#0" expanded="true" />
-            <element signature="e#3542#3572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Wallet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_container_drawer.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_prev_year_question_paper.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamPreview.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pdfreader.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="242" column="29" selection-start-line="242" selection-start-column="29" selection-end-line="242" selection-end-column="29" />
+        <state relative-caret-position="135">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/PrevQPaperModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/PDFReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
-            <element signature="e#2611#3097#0" expanded="true" />
-            <element signature="e#3096#3097#0" expanded="true" />
-            <element signature="e#7281#7587#0" expanded="true" />
-            <element signature="e#7586#7587#0" expanded="true" />
-            <element signature="e#7649#7835#0" expanded="true" />
-            <element signature="e#7834#7835#0" expanded="true" />
-            <element signature="e#8934#9724#0" expanded="true" />
-            <element signature="e#9723#9724#0" expanded="true" />
-            <element signature="e#9726#10639#0" expanded="true" />
-            <element signature="e#10638#10639#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MainContainer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Test/TestContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="219" column="65" selection-start-line="219" selection-start-column="65" selection-end-line="219" selection-end-column="65" />
+        <state relative-caret-position="210">
+          <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Wallet.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthPrevYearQuestionPaper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        <state relative-caret-position="199">
+          <caret line="107" column="119" selection-start-line="107" selection-start-column="119" selection-end-line="107" selection-end-column="119" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthAllExams.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthNotification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1321">
-          <caret line="128" column="63" selection-start-line="128" selection-start-column="56" selection-end-line="128" selection-end-column="63" />
+        <state relative-caret-position="899">
+          <caret line="134" column="33" lean-forward="true" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_subject_all_exam.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="532">
           <caret line="38" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_full_length_notification.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_boosters.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -996,47 +858,259 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Home.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/BoosterModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="338" column="68" selection-start-line="338" selection-start-column="68" selection-end-line="338" selection-end-column="68" />
+        <state relative-caret-position="75">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/SubjectWiseExam/SubjectAllExam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1808">
+          <caret line="183" selection-start-line="74" selection-start-column="12" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/Boosters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_booster_content.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/BoosterContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upiform.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Payment/UPIForm.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Models/PaytmModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="199" column="45" selection-start-line="199" selection-start-column="45" selection-end-line="199" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/org/json/JSONObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-248">
+          <caret line="309" column="24" lean-forward="true" selection-start-line="309" selection-start-column="24" selection-end-line="309" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Utils/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_container_drawer.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/small_icon.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MainContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
+          <caret line="216" column="24" selection-start-line="212" selection-start-column="14" selection-end-line="216" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Service/FirebaseIdService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Service/FirebaseCloudMessagingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/SubjectWiseExam/SubjectAllExam.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+        <state relative-caret-position="180">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthNotification.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamSummary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="89" column="87" selection-start-line="89" selection-start-column="87" selection-end-line="89" selection-end-column="87" />
-          <folding>
-            <element signature="e#2979#4162#0" expanded="true" />
-            <element signature="e#4229#4625#0" expanded="true" />
-            <element signature="e#4624#4625#0" expanded="true" />
-            <element signature="e#4161#4162#0" expanded="true" />
-            <element signature="e#4164#4652#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Test/TestContent.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="132" column="120" selection-start-line="132" selection-start-column="120" selection-end-line="132" selection-end-column="120" />
+        <state relative-caret-position="225">
+          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="192" column="49" selection-start-line="192" selection-start-column="49" selection-end-line="192" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="359" column="68" selection-start-line="359" selection-start-column="68" selection-end-line="359" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/SubMenuActivity/FullLengthExams/FullLengthAllExams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="161" column="22" lean-forward="true" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_wallet.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_preview.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/PersonalMenu/Wallet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/HelperActivity/ExamPreview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="315" column="109" selection-start-line="315" selection-start-column="109" selection-end-line="315" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="292" column="40" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/akashapplications/technicalanna/MenuFragments/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
-            <element signature="e#4368#6032#0" expanded="true" />
-            <element signature="e#6031#6032#0" expanded="true" />
-            <element signature="e#6034#6522#0" expanded="true" />
-            <element signature="e#6521#6522#0" expanded="true" />
+            <element signature="e#3875#4353#0" expanded="true" />
+            <element signature="e#4352#4353#0" expanded="true" />
           </folding>
         </state>
       </provider>

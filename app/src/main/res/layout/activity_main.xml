@@ -190,6 +190,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
                     android:padding="10dp"
+                    android:visibility="invisible"
                     fancy:fb_borderColor="#3b5998"
                     fancy:fb_borderWidth="1dp"
                     fancy:fb_defaultColor="@android:color/transparent"

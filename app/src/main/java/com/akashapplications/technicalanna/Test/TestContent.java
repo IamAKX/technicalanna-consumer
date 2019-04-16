@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.akashapplications.technicalanna.R;
 import com.akashapplications.technicalanna.SubMenuActivity.FullLengthExams.FullLengthAllExams;
 import com.akashapplications.technicalanna.SubMenuActivity.FullLengthExams.FullLengthNotification;
+import com.akashapplications.technicalanna.SubMenuActivity.FullLengthExams.FullLengthPrevYearQuestionPaper;
 import com.akashapplications.technicalanna.SubMenuActivity.SubjectWiseExam.SubjectAllExam;
 import com.akashapplications.technicalanna.Utils.API;
 import com.akashapplications.technicalanna.Utils.RequestQueueSingleton;
@@ -87,6 +88,7 @@ public class TestContent extends AppCompatActivity implements AdapterView.OnItem
                 break;
 
             case 2:
+                startActivity(new Intent(getBaseContext(), FullLengthPrevYearQuestionPaper.class).putExtra("subject", subject));
                 break;
 
             case 3:

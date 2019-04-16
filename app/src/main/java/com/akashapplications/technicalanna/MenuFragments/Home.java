@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.akashapplications.technicalanna.HelperActivity.Boosters;
 import com.akashapplications.technicalanna.MainContainer;
 import com.akashapplications.technicalanna.Models.Exams;
 import com.akashapplications.technicalanna.R;
@@ -84,6 +85,23 @@ public class Home extends Fragment {
                 getFragmentManager().beginTransaction()
                         .replace(R.id.container,new com.akashapplications.technicalanna.MenuFragments.Exams())
                         .commit();
+            }
+        });
+
+        getView().findViewById(R.id.booster).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, Boosters.class));
+            }
+        });
+
+        getView().findViewById(R.id.support).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto","ncpminds@gmail.com", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback on Technical Anna");
+                startActivity(Intent.createChooser(emailIntent, "Send email..."));
             }
         });
 

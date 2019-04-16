@@ -5,24 +5,29 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <application
         android:name=".GlobalConfig"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SubMenuActivity.FullLengthExams.FullLengthNotification"></activity>
+        <activity android:name=".HelperActivity.BoosterContent" />
+        <activity android:name=".HelperActivity.Boosters" />
+        <activity android:name=".HelperActivity.PDFReader" />
+        <activity android:name=".SubMenuActivity.FullLengthExams.FullLengthPrevYearQuestionPaper" />
+        <activity android:name=".SubMenuActivity.FullLengthExams.FullLengthNotification" />
         <activity android:name=".PersonalMenu.Wallet" />
         <activity android:name=".HelperActivity.ExamSummary" />
         <activity android:name=".HelperActivity.Quiz" />
         <activity android:name=".HelperActivity.ExamPreview" />
         <activity android:name=".SubMenuActivity.FullLengthExams.FullLengthAllExams" />
         <activity android:name=".SubMenuActivity.SubjectWiseExam.SubjectAllExam" />
-        <activity android:name=".SubMenuActivities.SubMenuActivity.AllExams" />
         <activity android:name=".HelperActivity.TopperTipFull" />
         <activity android:name=".UserProfile.PasswordRecoverySecond" />
         <activity android:name=".UserProfile.PasswordRecoveryFirst" />
@@ -46,6 +51,24 @@
         <activity android:name=".AppIntro" />
         <activity android:name=".Registeration" />
         <activity android:name=".Login" />
+
+        <service android:name=".Service.FirebaseCloudMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Service.FirebaseIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/small_icon" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/blue_button" />
 
         <uses-library
             android:name="org.apache.http.legacy"

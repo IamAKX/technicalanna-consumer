@@ -210,11 +210,11 @@ import org.json.JSONObject;
                 changeFragment(fragment);
                 break;
 
-            case R.id.nav_notification:
-                fragment = new Notification();
-                getSupportActionBar().setTitle("Notification");
-                changeFragment(fragment);
-                break;
+//            case R.id.nav_notification:
+//                fragment = new Notification();
+//                getSupportActionBar().setTitle("Notification");
+//                changeFragment(fragment);
+//                break;
 
             case R.id.nav_wallet:
                 startActivity(new Intent(getBaseContext(), Wallet.class));
@@ -294,7 +294,7 @@ import org.json.JSONObject;
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         NetworkResponse networkResponse = error.networkResponse;
-                        Toast.makeText(getBaseContext(), new String(networkResponse.data), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getBaseContext(), new String(networkResponse.data), Toast.LENGTH_SHORT).show();
                     }
                 });
 

@@ -22,6 +22,13 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"
+        android:indeterminate="true"/>
     <RelativeLayout
         android:padding="16dp"
         android:layout_below="@+id/appbar"
@@ -57,17 +64,17 @@
                         android:id="@+id/rupee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="100"
+                        android:text="0.00"
                         android:textStyle="bold"
                         android:textSize="35sp"/>
 
-                    <TextView
-                        android:id="@+id/paise"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=".00"
-                        android:textStyle="bold"
-                        android:textSize="15sp"/>
+                    <!--<TextView-->
+                        <!--android:id="@+id/paise"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text=".00"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textSize="15sp"/>-->
 
                     <TextView
                         android:layout_marginLeft="10dp"
@@ -101,10 +108,12 @@
                         app:cardElevation="5dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:id="@+id/paytm"
                         app:cardCornerRadius="5dp">
 
                         <RelativeLayout
+                            android:id="@+id/paytm"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/paytm">
@@ -118,12 +127,15 @@
                         android:layout_height="100dp"
                         app:cardBackgroundColor="#fff"
                         app:cardElevation="5dp"
+                        android:visibility="invisible"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:id="@+id/upi"
                         app:cardCornerRadius="5dp">
 
                         <RelativeLayout
+                            android:id="@+id/upi"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/upi">

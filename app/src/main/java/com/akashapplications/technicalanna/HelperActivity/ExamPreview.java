@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,8 @@ public class ExamPreview extends AppCompatActivity {
     SubjectExamsModel examsModel;
     TextView name, subject,full_marks, fees, time, count;
     FancyButton go;
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +54,16 @@ public class ExamPreview extends AppCompatActivity {
         time = findViewById(R.id.time);
         count = findViewById(R.id.count);
         go = findViewById(R.id.start);
+
+
+        progressBar = findViewById(R.id.progressbar);
+        progressBar.setIndeterminate(true);
+        progressBar.getIndeterminateDrawable().setColorFilter(
+                getResources().getColor(R.color.blue_button),
+                android.graphics.PorterDuff.Mode.SRC_IN);
+
+        progressBar.setVisibility(View.GONE);
+        progressBar.bringToFront();
 
         name.setText(examsModel.getName().toUpperCase());
         subject.setText(examsModel.getSubject());
@@ -240,10 +253,12 @@ public class ExamPreview extends AppCompatActivity {
                             if(amount < examsModel.getFees())
                             {
                                 // trigger to add money to wallet
+                                startActivity(new Intent(getBaseContext(),Profile.class));
                             }
                             else
                             {
                                 // trigger to buy
+                                new Debit(examsModel.getFees()).execute();
                             }
 
                         }
@@ -281,4 +296,120 @@ public class ExamPreview extends AppCompatActivity {
         }
     }
 
+    private class Debit extends AsyncTask<Void,Void,Void>{
+        String tamt;
+
+        public Debit(int tamtt) {
+            this.tamt = String.valueOf(tamtt);
+            progressBar.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            JSONObject reqBody = new JSONObject();
+            try {
+                reqBody.put("email",new UserData(getBaseContext()).getEmail());
+                reqBody.put("amt",Double.parseDouble(tamt));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, API.DEBIT_WALLET, reqBody,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            if (progressBar.getVisibility() == View.VISIBLE)
+                                progressBar.setVisibility(View.GONE);
+                            Log.e("checking", response.toString());
+                            try {
+                                boolean res = response.has("res") ? response.getBoolean("res") : false;
+                                if(res){
+                                    new RegisterForExam().execute();
+                                }
+                                else
+                                {
+                                    Toast.makeText(getBaseContext(), "failed to update wallet amount", Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    if (progressBar.getVisibility() == View.VISIBLE)
+                        progressBar.setVisibility(View.GONE);
+                    NetworkResponse networkResponse = error.networkResponse;
+                    Toast.makeText(getBaseContext(), "failed to update wallet amount", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            jsonObjectRequest.setShouldCache(false);
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                    0,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+            ));
+            RequestQueue requestQueue = RequestQueueSingleton.getInstance(getBaseContext())
+                    .getRequestQueue();
+            requestQueue.getCache().clear();
+            requestQueue.add(jsonObjectRequest);
+
+            return null;
+        }
+    }
+
+    private class RegisterForExam extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressBar.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            JSONObject reqBody = new JSONObject();
+            try {
+                reqBody.put("email",new UserData(getBaseContext()).getEmail());
+                reqBody.put("subject",examsModel.getSubject());
+                reqBody.put("name",examsModel.getName());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, API.FULL_EXAM_ADD_SUBSCRIBTION, reqBody,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            if (progressBar.getVisibility() == View.VISIBLE)
+                                progressBar.setVisibility(View.GONE);
+                            Log.e("checking", response.toString());
+                            startActivity(new Intent(getBaseContext(), Quiz.class).putExtra("exam", examsModel));
+                            finish();
+
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    if (progressBar.getVisibility() == View.VISIBLE)
+                        progressBar.setVisibility(View.GONE);
+                    NetworkResponse networkResponse = error.networkResponse;
+                    Toast.makeText(getBaseContext(), "failed to update wallet amount", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            jsonObjectRequest.setShouldCache(false);
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                    0,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+            ));
+            RequestQueue requestQueue = RequestQueueSingleton.getInstance(getBaseContext())
+                    .getRequestQueue();
+            requestQueue.getCache().clear();
+            requestQueue.add(jsonObjectRequest);
+
+            return null;
+        }
+    }
 }

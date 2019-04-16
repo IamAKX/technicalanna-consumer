@@ -443,6 +443,7 @@ public class Login extends AppCompatActivity {
                                         data.setName(response.getString("name"));
                                     if(response.has("isEmailVerified"))
                                         data.setEmailVerified(response.getBoolean("isEmailVerified"));
+                                    data.setLoggedIn(true);
                                     startActivity(new Intent(getBaseContext(), MainContainer.class));
                                     finish();
                                 }
