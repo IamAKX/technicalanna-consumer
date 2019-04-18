@@ -1,4 +1,4 @@
-    package com.akashapplications.technicalanna;
+package com.akashapplications.technicalanna;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -47,7 +47,7 @@ import com.google.android.gms.common.api.Status;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-    public class MainContainer extends AppCompatActivity
+public class MainContainer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FragmentManager fragmentManager;
@@ -87,7 +87,7 @@ import org.json.JSONObject;
 
                             }
                         });
-                startActivity(new Intent(getBaseContext(),Login.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                startActivity(new Intent(getBaseContext(), Login.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 finish();
             }
         });
@@ -112,44 +112,21 @@ import org.json.JSONObject;
 
     }
 
-        @Override
-        protected void onStart() {
-            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                    .requestEmail()
-                    .build();
-            mGoogleApiClient = new GoogleApiClient.Builder(this)
-                    .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-                    .build();
-            mGoogleApiClient.connect();
-            super.onStart();
+    @Override
+    protected void onStart() {
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .build();
+        mGoogleApiClient.connect();
+        super.onStart();
 
-        }
+    }
 
     boolean doubleBackToExitPressedOnce = false;
 
-        @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            if (doubleBackToExitPressedOnce) {
-                super.onBackPressed();
-                return;
-            }
-
-            this.doubleBackToExitPressedOnce = true;
-            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-                    doubleBackToExitPressedOnce=false;
-                }
-            }, 2000);
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -163,7 +140,7 @@ import org.json.JSONObject;
 
         int id = item.getItemId();
 
-        switch (id){
+        switch (id) {
             case R.id.nav_profile:
                 startActivity(new Intent(getBaseContext(), Profile.class));
                 break;
@@ -178,15 +155,20 @@ import org.json.JSONObject;
                 break;
 
             case R.id.nav_rate:
-                Toast.makeText(getBaseContext(),"Redirect to app play store link", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Redirect to app play store link", Toast.LENGTH_LONG).show();
                 break;
+
+            case android.R.id.home:
+                finish();
+                break;
+
         }
         return true;
     }
 
     private void changeFragment(Fragment fragment) {
         fragmentManager.beginTransaction()
-                .replace(R.id.container,fragment)
+                .replace(R.id.container, fragment, "FRAGMENT")
                 .commit();
     }
 
@@ -197,7 +179,7 @@ import org.json.JSONObject;
         int id = item.getItemId();
 
         Fragment fragment = null;
-        switch (id){
+        switch (id) {
             case R.id.nav_home:
                 fragment = new Home();
                 getSupportActionBar().setTitle("Home");
@@ -234,7 +216,7 @@ import org.json.JSONObject;
                 break;
 
             case R.id.nav_rate:
-                Toast.makeText(getBaseContext(),"Redirect to app play store link", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Redirect to app play store link", Toast.LENGTH_LONG).show();
                 break;
 
         }
@@ -245,71 +227,101 @@ import org.json.JSONObject;
     }
 
 
-        private class GetUserDetail extends AsyncTask<Void,Void,Void> {
-            @Override
-            protected Void doInBackground(Void... voids) {
-                JSONObject reqBody = new JSONObject();
-                try {
-                    reqBody.put("email",new UserData(getBaseContext()).getEmail());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-
-                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, API.GET_PROFILE_DETAIL, reqBody,
-                        new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-
-                                Log.e(Tokens.LOG, response.toString());
-                                UserData data = new UserData(getBaseContext());
-                                try {
-                                    if (response.has("user_id"))
-                                        data.setUserID(response.getString("user_id"));
-                                    if (response.has("phone"))
-                                        data.setPhone(response.getString("phone"));
-                                    if (response.has("isPhoneVerified"))
-                                        data.setPhoneVerified(response.getBoolean("isPhoneVerified"));
-                                    if (response.has("image"))
-                                        data.setImage(response.getString("image"));
-                                    if (response.has("email"))
-                                        data.setEmail(response.getString("email"));
-                                    if (response.has("name"))
-                                        data.setName(response.getString("name"));
-                                    if(response.has("isEmailVerified"))
-                                        data.setEmailVerified(response.getBoolean("isEmailVerified"));
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-
-                                name.setText(data.getName());
-                                email.setText(data.getEmail());
-                                Glide.with(getBaseContext())
-                                        .load(data.getImage())
-                                        .apply(RequestOptions.circleCropTransform())
-                                        .into(imageView);
-
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        NetworkResponse networkResponse = error.networkResponse;
-//                        Toast.makeText(getBaseContext(), new String(networkResponse.data), Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-                jsonObjectRequest.setShouldCache(false);
-                jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
-                        0,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
-                ));
-                RequestQueue requestQueue = RequestQueueSingleton.getInstance(getBaseContext())
-                        .getRequestQueue();
-                requestQueue.getCache().clear();
-                requestQueue.add(jsonObjectRequest);
-
-                return null;
+    private class GetUserDetail extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... voids) {
+            JSONObject reqBody = new JSONObject();
+            try {
+                reqBody.put("email", new UserData(getBaseContext()).getEmail());
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
+
+
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, API.GET_PROFILE_DETAIL, reqBody,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+
+                            Log.e(Tokens.LOG, response.toString());
+                            UserData data = new UserData(getBaseContext());
+                            try {
+                                if (response.has("user_id"))
+                                    data.setUserID(response.getString("user_id"));
+                                if (response.has("phone"))
+                                    data.setPhone(response.getString("phone"));
+                                if (response.has("isPhoneVerified"))
+                                    data.setPhoneVerified(response.getBoolean("isPhoneVerified"));
+                                if (response.has("image"))
+                                    data.setImage(response.getString("image"));
+                                if (response.has("email"))
+                                    data.setEmail(response.getString("email"));
+                                if (response.has("name"))
+                                    data.setName(response.getString("name"));
+                                if (response.has("isEmailVerified"))
+                                    data.setEmailVerified(response.getBoolean("isEmailVerified"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                            name.setText(data.getName());
+                            email.setText(data.getEmail());
+                            Glide.with(getBaseContext())
+                                    .load(data.getImage())
+                                    .apply(RequestOptions.circleCropTransform())
+                                    .into(imageView);
+
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    NetworkResponse networkResponse = error.networkResponse;
+//                        Toast.makeText(getBaseContext(), new String(networkResponse.data), Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            jsonObjectRequest.setShouldCache(false);
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                    0,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+            ));
+            RequestQueue requestQueue = RequestQueueSingleton.getInstance(getBaseContext())
+                    .getRequestQueue();
+            requestQueue.getCache().clear();
+            requestQueue.add(jsonObjectRequest);
+
+            return null;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        Fragment f = getSupportFragmentManager().findFragmentById(R.id.container);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+            if (f instanceof Exams) {
+                changeFragment(new Home());
+                return;
+            } else {
+                this.doubleBackToExitPressedOnce = true;
+                Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+            }
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
+
+        }
+    }
+}

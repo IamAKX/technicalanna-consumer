@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -103,6 +104,7 @@ public class SubjectAllExam extends AppCompatActivity {
                                     m.setFullMarks(object.getInt("full_marks"));
                                     m.setName(object.getString("name"));
                                     m.setId(object.getString("id"));
+                                    m.setNegMark(object.getDouble("negmark"));
 
                                     ArrayList<QuizModel> qm = new ArrayList<>();
 
@@ -111,6 +113,7 @@ public class SubjectAllExam extends AppCompatActivity {
                                     {
                                         QuizModel qmodel = new QuizModel();
                                         JSONObject qObject = qArr.getJSONObject(j);
+                                        qmodel.setSolution(qObject.getString("solution"));
                                         qmodel.setQuestion(qObject.getString("question"));
                                         JSONArray ans = qObject.getJSONArray("answer");
                                         qmodel.setOption1(ans.getString(0));
@@ -179,5 +182,13 @@ public class SubjectAllExam extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 }

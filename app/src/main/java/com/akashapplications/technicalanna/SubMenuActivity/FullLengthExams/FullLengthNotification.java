@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.akashapplications.technicalanna.Adapters.ExamListAdapter;
+import com.akashapplications.technicalanna.Adapters.NotificationAdapter;
 import com.akashapplications.technicalanna.HelperActivity.ExamPreview;
 import com.akashapplications.technicalanna.Models.QuizModel;
 import com.akashapplications.technicalanna.Models.SubjectExamsModel;
@@ -95,8 +97,9 @@ public class FullLengthNotification extends AppCompatActivity {
                                     e.printStackTrace();
                                 }
                             }
-                            ArrayAdapter adapter = new ArrayAdapter<String>(FullLengthNotification.this,
-                                    android.R.layout.simple_list_item_1, titleList);
+//                            ArrayAdapter adapter = new ArrayAdapter<String>(FullLengthNotification.this,
+//                                    R.layout.list_noti_item, titleList);
+                            NotificationAdapter adapter = new NotificationAdapter(getBaseContext(),titleList);
                             listView.setAdapter(adapter);
                             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                 @Override
@@ -142,5 +145,13 @@ public class FullLengthNotification extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 }

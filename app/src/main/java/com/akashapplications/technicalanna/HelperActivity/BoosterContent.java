@@ -2,6 +2,7 @@ package com.akashapplications.technicalanna.HelperActivity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
@@ -51,6 +52,14 @@ public class BoosterContent extends AppCompatActivity {
             iv.setVisibility(View.VISIBLE);
             tv.setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 
     public boolean onTouchEvent(MotionEvent motionEvent) {

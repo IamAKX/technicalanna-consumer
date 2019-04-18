@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.akashapplications.technicalanna.Models.QuizModel;
 import com.akashapplications.technicalanna.Models.SubjectExamsModel;
 import com.akashapplications.technicalanna.R;
+import com.akashapplications.technicalanna.Utils.Tokens;
 import com.budiyev.android.circularprogressbar.CircularProgressBar;
 
 import java.util.ArrayList;
@@ -79,7 +82,7 @@ public class Quiz extends AppCompatActivity {
         int correct = 0;
         int incorrect = 0;
         int skipped = 0;
-        int markForSingleQuestion = examsModel.getFullMarks()/examsModel.getQuizList().size();
+        double markForSingleQuestion = examsModel.getFullMarks()/examsModel.getQuizList().size();
         for (int i = 0; i < ansArray.length; i++) {
             if(ansArray[i] == -1)
                 skipped++;
@@ -90,14 +93,20 @@ public class Quiz extends AppCompatActivity {
                     incorrect++;
 
         }
-        float percent = (correct * 100)/quizList.size();
+        double percent = (correct * 100)/quizList.size();
+        double fullMarks = ((markForSingleQuestion * correct) - (incorrect * examsModel.getNegMark() * markForSingleQuestion));
+        System.out.print("Total "+fullMarks);
+        Log.i(Tokens.LOG,"Total "+ fullMarks);
+
         startActivity(new Intent(getBaseContext(),ExamSummary.class)
         .putExtra("percent",percent)
-                        .putExtra("marks",(markForSingleQuestion*correct))
+                        .putExtra("marks",fullMarks)
                         .putExtra("total",examsModel.getFullMarks())
                         .putExtra("correct",correct)
                         .putExtra("skipped",skipped)
                         .putExtra("incorrect",incorrect)
+                        .putExtra("correctans",ansArray)
+                        .putExtra("exammodel",examsModel)
         );
         finish();
     }
@@ -212,5 +221,13 @@ public class Quiz extends AppCompatActivity {
             }
         }).start();
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 }

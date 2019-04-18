@@ -16,4 +16,8 @@
 
     <color name="dark_blue">#039BE5</color>
     <color name="orange">#EC7253</color>
+    <color name="option_button_border">#83aae5</color>
+
+    <color name="red_trans">#66F4511E</color>
+    <color name="gree_trans">#6643A047</color>
 </resources>

@@ -144,7 +144,13 @@
                     android:text="2 Question skipped"/>
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
             <mehdi.sakout.fancybuttons.FancyButton
+                android:layout_weight="1"
                 android:id="@+id/finish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -157,7 +163,21 @@
                 fancy:fb_radius="5dp"
                 fancy:fb_text="Finish"
                 fancy:fb_textColor="#3b5998" />
-
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:layout_weight="1"
+                android:id="@+id/soln"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                fancy:fb_borderColor="#fff"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@android:color/transparent"
+                fancy:fb_focusColor="#803B5998"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="Solution"
+                fancy:fb_textColor="#3b5998" />
+        </LinearLayout>
         </LinearLayout>
 
 

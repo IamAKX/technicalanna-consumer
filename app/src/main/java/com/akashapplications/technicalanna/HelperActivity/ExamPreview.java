@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import com.akashapplications.technicalanna.LocalData.UserData;
 import com.akashapplications.technicalanna.MainContainer;
 import com.akashapplications.technicalanna.Models.SubjectExamsModel;
 import com.akashapplications.technicalanna.PersonalMenu.Profile;
+import com.akashapplications.technicalanna.PersonalMenu.Wallet;
 import com.akashapplications.technicalanna.R;
 import com.akashapplications.technicalanna.Utils.API;
 import com.akashapplications.technicalanna.Utils.RequestQueueSingleton;
@@ -88,6 +90,8 @@ public class ExamPreview extends AppCompatActivity {
 
             }
         });
+
+
     }
 
     private class CheckSubscribtion extends AsyncTask<Void,Void,Void> {
@@ -253,7 +257,7 @@ public class ExamPreview extends AppCompatActivity {
                             if(amount < examsModel.getFees())
                             {
                                 // trigger to add money to wallet
-                                startActivity(new Intent(getBaseContext(),Profile.class));
+                                startActivity(new Intent(getBaseContext(), Wallet.class));
                             }
                             else
                             {
@@ -411,5 +415,13 @@ public class ExamPreview extends AppCompatActivity {
 
             return null;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 }

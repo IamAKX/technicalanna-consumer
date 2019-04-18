@@ -2,6 +2,7 @@ package com.akashapplications.technicalanna.HelperActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,5 +32,13 @@ public class TopperTipFull extends Activity {
                         .error(R.drawable.loading))
                 .into(imageView);
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 }

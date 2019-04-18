@@ -3,8 +3,16 @@ package com.akashapplications.technicalanna.Models;
 import java.io.Serializable;
 
 public class QuizModel implements Serializable {
-    String question, option1, option2, option3, option4;
+    String question, option1, option2, option3, option4, solution;
     int correctOption;
+
+    public String getSolution() {
+        return solution;
+    }
+
+    public void setSolution(String solution) {
+        this.solution = solution;
+    }
 
     public String getQuestion() {
         return question;

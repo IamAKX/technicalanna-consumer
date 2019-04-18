@@ -8,6 +8,15 @@ public class SubjectExamsModel implements Serializable {
     int fullMarks, fees, timeAlloted;
     ArrayList<QuizModel> quizList;
     ArrayList<String> registeredUser;
+    double negMark;
+
+    public double getNegMark() {
+        return negMark;
+    }
+
+    public void setNegMark(double negMark) {
+        this.negMark = negMark;
+    }
 
     public String getName() {
         return name;
