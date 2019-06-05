@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "504832530577-3br3o7npu4vdt20sd6u9voppaoetd3jj.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.akashapplications.technicalanna",
-            "certificate_hash": "e07ed28b872b378629e5dfc83b9c75cd1c0d73d6"
-          }
-        },
-        {
           "client_id": "504832530577-rrk976v95frjnh8562lupjf703221jt1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -31,7 +23,15 @@
           }
         },
         {
-          "client_id": "504832530577-47dsc8quvfeepi804sm0ispmm9mae7t3.apps.googleusercontent.com",
+          "client_id": "504832530577-3br3o7npu4vdt20sd6u9voppaoetd3jj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akashapplications.technicalanna",
+            "certificate_hash": "e07ed28b872b378629e5dfc83b9c75cd1c0d73d6"
+          }
+        },
+        {
+          "client_id": "504832530577-oqmtr17j05cp9ljca5li6utb4rvd21k9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -60,14 +60,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "504832530577-tsrcu8m11g5f195b1oksdprepdjl10mr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.akashapplications.technicalannaadmin",
-            "certificate_hash": "e07ed28b872b378629e5dfc83b9c75cd1c0d73d6"
-          }
-        },
-        {
           "client_id": "504832530577-d3h04sb6c324t71f9rkgvoir7rad8s7b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -76,7 +68,15 @@
           }
         },
         {
-          "client_id": "504832530577-47dsc8quvfeepi804sm0ispmm9mae7t3.apps.googleusercontent.com",
+          "client_id": "504832530577-tsrcu8m11g5f195b1oksdprepdjl10mr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akashapplications.technicalannaadmin",
+            "certificate_hash": "e07ed28b872b378629e5dfc83b9c75cd1c0d73d6"
+          }
+        },
+        {
+          "client_id": "504832530577-oqmtr17j05cp9ljca5li6utb4rvd21k9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

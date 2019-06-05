@@ -137,6 +137,7 @@ public class EmailVerification extends Activity implements OnOtpCompletionListen
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
+                            Log.e(Tokens.LOG,response.toString());
                             new EmailOTP(getBaseContext()).setPin(String.valueOf(pin));
                             Toast.makeText(getBaseContext(),"Email sent. Please check your INBOX / SPAM to get the OTP",Toast.LENGTH_SHORT).show();
                         }
@@ -144,6 +145,7 @@ public class EmailVerification extends Activity implements OnOtpCompletionListen
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     NetworkResponse networkResponse = error.networkResponse;
+                    Log.i("checking",error.toString());
                     Toast.makeText(getBaseContext(), "Failed", Toast.LENGTH_SHORT).show();
                 }
             });

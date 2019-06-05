@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.akashapplications.technicalanna.LocalData.UserData;
+import com.akashapplications.technicalanna.UserProfile.EmailVerification;
 import com.akashapplications.technicalanna.UserProfile.PhoneVerification;
 import com.akashapplications.technicalanna.Utils.API;
 import com.akashapplications.technicalanna.Utils.InternetConnectivity;

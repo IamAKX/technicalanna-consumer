@@ -1,9 +1,15 @@
 package com.akashapplications.technicalanna;
 
+import android.Manifest;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -43,9 +49,18 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
+import com.google.firebase.inappmessaging.FirebaseInAppMessaging;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.listener.multi.BaseMultiplePermissionsListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+import de.cketti.shareintentbuilder.ShareIntentBuilder;
 
 public class MainContainer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -54,7 +69,6 @@ public class MainContainer extends AppCompatActivity
     public static TextView email, name;
     public static ImageView imageView;
     private GoogleApiClient mGoogleApiClient;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +123,11 @@ public class MainContainer extends AppCompatActivity
                 .into(imageView);
 
         new GetUserDetail().execute();
+        Dexter.withActivity(MainContainer.this)
+                .withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .withListener(new BaseMultiplePermissionsListener())
+                .check();
+
 
     }
 
@@ -146,17 +165,26 @@ public class MainContainer extends AppCompatActivity
                 break;
 
             case R.id.nav_share:
-                String shareBody = "Enhance your studying style and test your progress with Technical Anna.\nInstall today from https://app.playstore.google.com";
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(sharingIntent, "Share Technical Anna"));
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                    String shareMessage= "\nLet me recommend you this application\n\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "choose one"));
+                } catch(Exception e) {
+                    //e.toString();
+                }
                 break;
 
             case R.id.nav_rate:
-                Toast.makeText(getBaseContext(), "Redirect to app play store link", Toast.LENGTH_LONG).show();
-                break;
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }                break;
 
             case android.R.id.home:
                 finish();
@@ -188,7 +216,7 @@ public class MainContainer extends AppCompatActivity
 
             case R.id.nav_exams:
                 fragment = new Exams();
-                getSupportActionBar().setTitle("Exams");
+                getSupportActionBar().setTitle("Subject Test");
                 changeFragment(fragment);
                 break;
 
@@ -207,16 +235,26 @@ public class MainContainer extends AppCompatActivity
                 break;
 
             case R.id.nav_share:
-                String shareBody = "Enhance your studying style and test your progress with Technical Anna.\nInstall today from https://app.playstore.google.com";
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(sharingIntent, "Share Technical Anna"));
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                    String shareMessage= "\nLet me recommend you this application\n\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "choose one"));
+                } catch(Exception e) {
+                    //e.toString();
+                }
                 break;
 
             case R.id.nav_rate:
-                Toast.makeText(getBaseContext(), "Redirect to app play store link", Toast.LENGTH_LONG).show();
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
                 break;
 
         }

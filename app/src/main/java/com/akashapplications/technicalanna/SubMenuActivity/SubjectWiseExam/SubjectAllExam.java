@@ -98,7 +98,7 @@ public class SubjectAllExam extends AppCompatActivity {
                                     JSONObject object = arr.getJSONObject(i);
                                     if(!object.has("name"))
                                         continue;
-                                    m.setFees(0);
+                                    m.setFees(object.getInt("fees"));
                                     m.setTimeAlloted(object.getInt("time_alloted"));
                                     m.setSubject(object.getString("subject"));
                                     m.setFullMarks(object.getInt("full_marks"));

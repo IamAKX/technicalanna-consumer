@@ -1,6 +1,7 @@
 package com.akashapplications.technicalanna.SubMenuActivity.FullLengthExams;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import com.akashapplications.technicalanna.Adapters.ExamListAdapter;
 import com.akashapplications.technicalanna.Adapters.NotificationAdapter;
 import com.akashapplications.technicalanna.HelperActivity.ExamPreview;
+import com.akashapplications.technicalanna.Models.NotificationModel;
 import com.akashapplications.technicalanna.Models.QuizModel;
 import com.akashapplications.technicalanna.Models.SubjectExamsModel;
 import com.akashapplications.technicalanna.R;
@@ -84,27 +86,45 @@ public class FullLengthNotification extends AppCompatActivity {
                         public void onResponse(JSONObject response) {
                             if (progressBar.getVisibility() == View.VISIBLE)
                                 progressBar.setVisibility(View.GONE);
-                            ArrayList<String> titleList = new ArrayList<>();
+                            final ArrayList<NotificationModel> titleList = new ArrayList<>();
+                            ArrayList<String> title = new ArrayList<>();
+
                             if(response.has("res")) {
 
                                 try {
                                     response = response.getJSONObject("res");
                                     JSONArray arr = response.getJSONArray("notification");
                                     for (int i = 0; i < arr.length(); i++) {
-                                        titleList.add(arr.getString(i));
+                                        NotificationModel m = new NotificationModel();
+                                       JSONObject obj = arr.getJSONObject(i);
+                                       m.setText(obj.getString("text"));
+                                       m.setLink(obj.getString("link"));
+                                       title.add(m.getText());
+                                       titleList.add(m);
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
                             }
-//                            ArrayAdapter adapter = new ArrayAdapter<String>(FullLengthNotification.this,
-//                                    R.layout.list_noti_item, titleList);
-                            NotificationAdapter adapter = new NotificationAdapter(getBaseContext(),titleList);
+                            ArrayAdapter adapter = new ArrayAdapter<String>(FullLengthNotification.this,
+                                    android.R.layout.simple_list_item_1, title);
+//                            NotificationAdapter adapter = new NotificationAdapter(getBaseContext(),title);
                             listView.setAdapter(adapter);
                             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                                    startActivity(new Intent(getBaseContext(), ExamPreview.class).putExtra("exam",list.get(position)));
+                                    if(titleList.get(position).getLink() != null || titleList.get(position).getLink().length() != 0)
+                                    {
+                                        Uri webpage = Uri.parse(titleList.get(position).getLink());
+
+                                        if (!titleList.get(position).getLink().startsWith("http://") && !titleList.get(position).getLink().startsWith("https://")) {
+                                            webpage = Uri.parse("http://" + titleList.get(position).getLink());
+                                        }
+                                        Intent i = new Intent(Intent.ACTION_VIEW);
+                                        i.setData(webpage);
+                                        startActivity(i);
+                                    }
                                 }
                             });
 

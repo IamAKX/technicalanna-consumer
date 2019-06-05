@@ -133,7 +133,7 @@ public class ExamPreview extends AppCompatActivity {
                                 boolean res = response.getBoolean("res");
                                 if (res)
                                 {
-                                    startActivity(new Intent(getBaseContext(), Quiz.class).putExtra("exam", examsModel));
+                                    startActivity(new Intent(getBaseContext(), QSoln.class).putExtra("exam", examsModel));
                                     finish();
                                 }
                                 else

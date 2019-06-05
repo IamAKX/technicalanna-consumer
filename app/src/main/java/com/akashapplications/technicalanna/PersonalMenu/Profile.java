@@ -166,7 +166,7 @@ public class Profile extends Activity {
                 .setIcon(R.drawable.upload)
                 .setTitle("Uploading your profile image")
                 .setCancelable(false)
-                .setMessage("Sit back and relax while we create your account")
+                .setMessage("Sit back and relax while we upload your image")
                 .setTopColorRes(R.color.blue_button);
 
         progressDialog.show();

@@ -31,6 +31,7 @@ public class Quiz extends AppCompatActivity {
     int currentQuestion = 1;
     int ansArray[];
 
+    volatile boolean stop = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +72,17 @@ public class Quiz extends AppCompatActivity {
                     populateQuestion();
                 }
 
+            }
+        });
+        findViewById(R.id.prev).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(currentQuestion>1)
+                {
+                    currentQuestion--;
+                    setAllOptionWhite();
+                    populateQuestion();
+                }
             }
         });
         updateProgress();
@@ -158,6 +170,11 @@ public class Quiz extends AppCompatActivity {
                 optionArray[3].setBackgroundColor(getResources().getColor(R.color.blue_white));
             }
         });
+
+        if(ansArray[currentQuestion-1]!= -1)
+        {
+            optionArray[ansArray[currentQuestion-1]-1].setBackgroundColor(getResources().getColor(R.color.blue_white));
+        }
     }
 
     private void setAllOptionWhite() {
@@ -173,16 +190,17 @@ public class Quiz extends AppCompatActivity {
         optionArray[2].setEnabled(b);
         optionArray[3].setEnabled(b);
     }
-
+Thread t;
     private void updateProgress() {
 
-        new Thread(new Runnable() {
+        t = new Thread(new Runnable() {
 
             @Override
             public void run() {
                 int sec = 0;
                 int min = examsModel.getTimeAlloted()-1;
-
+                final int totalSec = (min+1)*60;
+                int curSec = 0;
                 while (min >=0)// TODO Auto-generated method stub
                 {
                     if(min < 0)
@@ -191,15 +209,16 @@ public class Quiz extends AppCompatActivity {
                         time.setTextColor(getResources().getColor(R.color.colorAccent));
                     while (sec <= 59) {
                         sec += 1;
-
+                        curSec++;
                         final int finalsec = sec;
                         final int finalMin = min;
+                        final int finalCurSec = curSec;
                         handler.post(new Runnable() {
 
                             @Override
                             public void run() {
                                 // TODO Auto-generated method stub
-                                progressBar.setProgress((finalsec * 100) / 59);
+                                progressBar.setProgress((finalCurSec * 100) / totalSec);
                                 time.setText(String.format("%02d",finalMin) +" : " + String.format("%02d",(60 -finalsec)));
                             }
                         });
@@ -216,10 +235,12 @@ public class Quiz extends AppCompatActivity {
                 }
 
 //                setEnabilityOfOptions(false);
-                calculateMarks();
+                if(!stop)
+                    calculateMarks();
 
             }
-        }).start();
+        });
+        t.start();
 
     }
 
@@ -229,5 +250,12 @@ public class Quiz extends AppCompatActivity {
             finish();
         }
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        stop = true;
+        t.interrupt();
+        super.onDestroy();
     }
 }

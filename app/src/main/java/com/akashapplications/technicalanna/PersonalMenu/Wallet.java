@@ -81,10 +81,10 @@ public class Wallet extends AppCompatActivity {
             }
         });
 
-        Dexter.withActivity(Wallet.this)
-                .withPermissions(Manifest.permission.READ_SMS, Manifest.permission.RECEIVE_SMS)
-                .withListener(new BaseMultiplePermissionsListener())
-                .check();
+//        Dexter.withActivity(Wallet.this)
+//                .withPermissions(Manifest.permission.READ_SMS, Manifest.permission.RECEIVE_SMS)
+//                .withListener(new BaseMultiplePermissionsListener())
+//                .check();
         progressBar = findViewById(R.id.progressbar);
         progressBar.setIndeterminate(true);
         progressBar.getIndeterminateDrawable().setColorFilter(
@@ -292,10 +292,11 @@ public class Wallet extends AppCompatActivity {
 
 
         PaytmModel paytmModel = new PaytmModel();
-        paytmModel.setmId("LkYRfu41871473492793");
+        paytmModel.setmId("QcWoyS72356675836968");
         paytmModel.setChannelId("WAP");
         paytmModel.setTxnAmount(String.valueOf(amt));
-        paytmModel.setWebsite("WEBSTAGING");
+//        paytmModel.setWebsite("WEBSTAGING");
+        paytmModel.setWebsite("DEFAULT");
         paytmModel.setCallBackUrl(callBack);
         paytmModel.setIndustryTypeId("Retail");
         paytmModel.setOrderId(orderID);
@@ -372,7 +373,7 @@ public class Wallet extends AppCompatActivity {
 
     private void startPayment(String checksum, final PaytmModel model) {
 
-        PaytmPGService Service = PaytmPGService.getStagingService();
+        PaytmPGService Service = PaytmPGService.getProductionService();
         HashMap<String, String> paramMap = new HashMap<String, String>();
         paramMap.put("MID", model.getmId());
         // Key in your staging and production MID available in your dashboard
@@ -395,26 +396,38 @@ public class Wallet extends AppCompatActivity {
             /*Call Backs*/
             public void someUIErrorOccurred(String inErrorMessage) {
                 Toast.makeText(getBaseContext(), inErrorMessage, Toast.LENGTH_LONG).show();
+                Log.e(Tokens.LOG+" - paytm", inErrorMessage);
 
             }
 
             public void onTransactionResponse(Bundle inResponse) {
-                Toast.makeText(getBaseContext(), inResponse.toString(), Toast.LENGTH_LONG).show();
-                new Credit(model.getTxnAmount()).execute();
+                Log.e(Tokens.LOG+" - paytm", inResponse.toString());
+                if(!inResponse.toString().contains("TXN_FAILURE")) {
+                    Toast.makeText(getBaseContext(), inResponse.toString(), Toast.LENGTH_LONG).show();
+                    new Credit(model.getTxnAmount()).execute();
+                }
+                else
+                {
+                    Toast.makeText(getBaseContext(), "Transaction Failed", Toast.LENGTH_LONG).show();
+                }
             }
 
             public void networkNotAvailable() {
+
                 Toast.makeText(getBaseContext(), "Network not available", Toast.LENGTH_LONG).show();
 
             }
 
             public void clientAuthenticationFailed(String inErrorMessage) {
+                Log.e(Tokens.LOG+" - paytm", inErrorMessage);
+
                 Toast.makeText(getBaseContext(), inErrorMessage, Toast.LENGTH_LONG).show();
 
             }
 
             public void onErrorLoadingWebPage(int iniErrorCode, String inErrorMessage, String inFailingUrl) {
                 Toast.makeText(getBaseContext(), inErrorMessage, Toast.LENGTH_LONG).show();
+                Log.e(Tokens.LOG+" - paytm", inErrorMessage);
 
             }
 
@@ -425,6 +438,7 @@ public class Wallet extends AppCompatActivity {
 
             public void onTransactionCancel(String inErrorMessage, Bundle inResponse) {
                 Toast.makeText(getBaseContext(), inErrorMessage, Toast.LENGTH_LONG).show();
+                Log.e(Tokens.LOG+" - paytm", inErrorMessage);
 
             }
         });
@@ -433,7 +447,7 @@ public class Wallet extends AppCompatActivity {
 
     private class GenerateChecksum extends AsyncTask<String,String,String>{
         PaytmModel model;
-        String url = "http://ncp.onlinewebshop.net/paytm/generateChecksum.php";
+        String url = "http://technicalanna.000webhostapp.com/paytm/paytm/generateChecksum.php";
         String varifyurl = "https://pguat.paytm.com/paytmchecksum/paytmCallback.jsp";
         String CHECKSUMHASH = "";
         public GenerateChecksum(PaytmModel model) {
@@ -455,7 +469,7 @@ public class Wallet extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
 
                             //If we are getting success from server
-                            Log.i(Tokens.LOG, response);
+                            Log.i(Tokens.LOG+" - paytm", response);
                             try {
                                 JSONObject object = new JSONObject(response);
                                 CHECKSUMHASH = object.has("CHECKSUMHASH")?object.getString("CHECKSUMHASH"):"";
