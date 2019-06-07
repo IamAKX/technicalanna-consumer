@@ -151,6 +151,7 @@ public class Registeration extends Activity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+//                            startActivity(new Intent(getBaseContext(), EmailVerification.class));
 
                             startActivity(new Intent(getBaseContext(), PhoneVerification.class));
                             finish();
